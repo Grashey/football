@@ -14,6 +14,7 @@ class LeagueViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        presenter?.fetchData()
     }
 
 }
