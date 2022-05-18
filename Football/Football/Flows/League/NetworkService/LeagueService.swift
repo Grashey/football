@@ -17,7 +17,7 @@ class LeagueService: iLeagueService {
     let httpClient: iHTTPClient
     let requestBuilder: iRequestBuilder
 
-    init(httpClient: iHTTPClient = HTTPClient(), requestBuilder: iRequestBuilder = RequestBuilder()) {
+    init(httpClient: iHTTPClient, requestBuilder: iRequestBuilder) {
         self.httpClient = httpClient
         self.requestBuilder = requestBuilder
     }

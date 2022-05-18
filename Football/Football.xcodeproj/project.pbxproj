@@ -19,6 +19,10 @@
 		4A89976028356EAD00446CE9 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89975F28356EAD00446CE9 /* RequestBuilder.swift */; };
 		4A899762283570B500446CE9 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A899761283570B500446CE9 /* RootCoordinator.swift */; };
 		4A8997642835728500446CE9 /* LeagueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8997632835728500446CE9 /* LeagueViewController.swift */; };
+		4A89976828357BDF00446CE9 /* LeaguePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89976728357BDF00446CE9 /* LeaguePresenter.swift */; };
+		4A89976A28357C7100446CE9 /* LeagueAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89976928357C7100446CE9 /* LeagueAssembly.swift */; };
+		4A89976C28357D8700446CE9 /* ModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89976B28357D8700446CE9 /* ModuleAssembly.swift */; };
+		4A89976E28357DEB00446CE9 /* ModuleName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89976D28357DEB00446CE9 /* ModuleName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		4A89975F28356EAD00446CE9 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		4A899761283570B500446CE9 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		4A8997632835728500446CE9 /* LeagueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueViewController.swift; sourceTree = "<group>"; };
+		4A89976728357BDF00446CE9 /* LeaguePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguePresenter.swift; sourceTree = "<group>"; };
+		4A89976928357C7100446CE9 /* LeagueAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueAssembly.swift; sourceTree = "<group>"; };
+		4A89976B28357D8700446CE9 /* ModuleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleAssembly.swift; sourceTree = "<group>"; };
+		4A89976D28357DEB00446CE9 /* ModuleName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleName.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,8 @@
 			children = (
 				4A89975028355EE900446CE9 /* NetworkService */,
 				4A8997632835728500446CE9 /* LeagueViewController.swift */,
+				4A89976728357BDF00446CE9 /* LeaguePresenter.swift */,
+				4A89976928357C7100446CE9 /* LeagueAssembly.swift */,
 			);
 			path = League;
 			sourceTree = "<group>";
@@ -120,9 +130,19 @@
 			isa = PBXGroup;
 			children = (
 				4A8997552835631200446CE9 /* NetworkService */,
-				4A899761283570B500446CE9 /* RootCoordinator.swift */,
+				4A89976F28357F8500446CE9 /* NavigationService */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		4A89976F28357F8500446CE9 /* NavigationService */ = {
+			isa = PBXGroup;
+			children = (
+				4A899761283570B500446CE9 /* RootCoordinator.swift */,
+				4A89976B28357D8700446CE9 /* ModuleAssembly.swift */,
+				4A89976D28357DEB00446CE9 /* ModuleName.swift */,
+			);
+			path = NavigationService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,9 +222,13 @@
 				4A8997542835630500446CE9 /* Route.swift in Sources */,
 				4A89975E28356D0E00446CE9 /* LeagueService.swift in Sources */,
 				4A89973B2835585400446CE9 /* AppDelegate.swift in Sources */,
+				4A89976828357BDF00446CE9 /* LeaguePresenter.swift in Sources */,
 				4A89973D2835585400446CE9 /* SceneDelegate.swift in Sources */,
 				4A899762283570B500446CE9 /* RootCoordinator.swift in Sources */,
+				4A89976A28357C7100446CE9 /* LeagueAssembly.swift in Sources */,
 				4A89976028356EAD00446CE9 /* RequestBuilder.swift in Sources */,
+				4A89976E28357DEB00446CE9 /* ModuleName.swift in Sources */,
+				4A89976C28357D8700446CE9 /* ModuleAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

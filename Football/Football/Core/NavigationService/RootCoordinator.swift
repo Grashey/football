@@ -16,15 +16,15 @@ class RootCoordinator: iCoordinator {
 
     let window: UIWindow?
     var navigationController: UINavigationController?
+    let assembly: iModuleAssembly
 
-    init(window: UIWindow?) {
+    init(window: UIWindow?, assembly: iModuleAssembly = ModuleAssembly()) {
         self.window = window
+        self.assembly = assembly
     }
 
     func start() {
-        let controller = LeagueViewController()
-        controller.view.backgroundColor = .yellow
-
+        let controller = assembly.build(.league)
         navigationController = UINavigationController(rootViewController: controller)
         window?.rootViewController = navigationController
     }

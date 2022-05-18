@@ -8,10 +8,12 @@
 import UIKit
 
 class LeagueViewController: UIViewController {
+    
+    var presenter: iLeaguePresenter?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
 
 }
