@@ -11,6 +11,14 @@
 		4A89973D2835585400446CE9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89973C2835585400446CE9 /* SceneDelegate.swift */; };
 		4A8997442835585700446CE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A8997432835585700446CE9 /* Assets.xcassets */; };
 		4A8997472835585700446CE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A8997452835585700446CE9 /* LaunchScreen.storyboard */; };
+		4A89974F28355E8F00446CE9 /* LeagueResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89974E28355E8F00446CE9 /* LeagueResponse.swift */; };
+		4A8997542835630500446CE9 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8997532835630500446CE9 /* Route.swift */; };
+		4A8997582835644300446CE9 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8997572835644300446CE9 /* HTTPClient.swift */; };
+		4A89975C28356CA700446CE9 /* LeagueRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89975B28356CA700446CE9 /* LeagueRoute.swift */; };
+		4A89975E28356D0E00446CE9 /* LeagueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89975D28356D0E00446CE9 /* LeagueService.swift */; };
+		4A89976028356EAD00446CE9 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89975F28356EAD00446CE9 /* RequestBuilder.swift */; };
+		4A899762283570B500446CE9 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A899761283570B500446CE9 /* RootCoordinator.swift */; };
+		4A8997642835728500446CE9 /* LeagueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8997632835728500446CE9 /* LeagueViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +28,14 @@
 		4A8997432835585700446CE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A8997462835585700446CE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A8997482835585700446CE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A89974E28355E8F00446CE9 /* LeagueResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueResponse.swift; sourceTree = "<group>"; };
+		4A8997532835630500446CE9 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		4A8997572835644300446CE9 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		4A89975B28356CA700446CE9 /* LeagueRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueRoute.swift; sourceTree = "<group>"; };
+		4A89975D28356D0E00446CE9 /* LeagueService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueService.swift; sourceTree = "<group>"; };
+		4A89975F28356EAD00446CE9 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		4A899761283570B500446CE9 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		4A8997632835728500446CE9 /* LeagueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,11 +70,59 @@
 			children = (
 				4A89973A2835585400446CE9 /* AppDelegate.swift */,
 				4A89973C2835585400446CE9 /* SceneDelegate.swift */,
+				4A8997562835632200446CE9 /* Core */,
+				4A89975228355F0C00446CE9 /* Flows */,
 				4A8997432835585700446CE9 /* Assets.xcassets */,
 				4A8997452835585700446CE9 /* LaunchScreen.storyboard */,
 				4A8997482835585700446CE9 /* Info.plist */,
 			);
 			path = Football;
+			sourceTree = "<group>";
+		};
+		4A89975028355EE900446CE9 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				4A89974E28355E8F00446CE9 /* LeagueResponse.swift */,
+				4A89975B28356CA700446CE9 /* LeagueRoute.swift */,
+				4A89975D28356D0E00446CE9 /* LeagueService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		4A89975128355F0100446CE9 /* League */ = {
+			isa = PBXGroup;
+			children = (
+				4A89975028355EE900446CE9 /* NetworkService */,
+				4A8997632835728500446CE9 /* LeagueViewController.swift */,
+			);
+			path = League;
+			sourceTree = "<group>";
+		};
+		4A89975228355F0C00446CE9 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				4A89975128355F0100446CE9 /* League */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		4A8997552835631200446CE9 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				4A8997532835630500446CE9 /* Route.swift */,
+				4A8997572835644300446CE9 /* HTTPClient.swift */,
+				4A89975F28356EAD00446CE9 /* RequestBuilder.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		4A8997562835632200446CE9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4A8997552835631200446CE9 /* NetworkService */,
+				4A899761283570B500446CE9 /* RootCoordinator.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,8 +195,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A89975C28356CA700446CE9 /* LeagueRoute.swift in Sources */,
+				4A89974F28355E8F00446CE9 /* LeagueResponse.swift in Sources */,
+				4A8997582835644300446CE9 /* HTTPClient.swift in Sources */,
+				4A8997642835728500446CE9 /* LeagueViewController.swift in Sources */,
+				4A8997542835630500446CE9 /* Route.swift in Sources */,
+				4A89975E28356D0E00446CE9 /* LeagueService.swift in Sources */,
 				4A89973B2835585400446CE9 /* AppDelegate.swift in Sources */,
 				4A89973D2835585400446CE9 /* SceneDelegate.swift in Sources */,
+				4A899762283570B500446CE9 /* RootCoordinator.swift in Sources */,
+				4A89976028356EAD00446CE9 /* RequestBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
