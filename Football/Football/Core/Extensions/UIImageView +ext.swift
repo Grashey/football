@@ -10,8 +10,7 @@ import UIKit
 ///  Честно подсмотрено на просторах stockoverflow, было интересно попробовать
 extension UIImageView {
     
-    func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
-        contentMode = mode
+    private func downloaded(from url: URL, size: CGSize?) {
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard
                 let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
@@ -20,13 +19,31 @@ extension UIImageView {
                 let image = UIImage(data: data)
             else { return }
             DispatchQueue.main.async { [weak self] in
-                self?.image = image
+                if let size = size {
+                    self?.image = self?.resizeImage(image: image, targetSize: size)
+                } else {
+                    self?.image = image
+                }
             }
         }.resume()
     }
     
-    func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
+    func downloaded(from link: String, scaledToSize: CGSize? = nil) {
         guard let url = URL(string: link) else { return }
-        downloaded(from: url)
+        downloaded(from: url, size: scaledToSize)
+    }
+    
+    private func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage? {
+        let size = image.size
+        let widthRatio = targetSize.width / size.width
+        let heightRatio = targetSize.height / size.height
+        let newSize = CGSize(width: size.width * widthRatio, height: size.height * heightRatio)
+        let rect = CGRect(origin: .zero, size: newSize)
+
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1)
+        image.draw(in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
     }
 }

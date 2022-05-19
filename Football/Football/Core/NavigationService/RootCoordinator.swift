@@ -24,9 +24,16 @@ class RootCoordinator: iCoordinator {
     }
 
     func start() {
-        let controller = assembly.build(.league)
+        let controller = assembly.build(.league, moduleInput: nil)
         navigationController = UINavigationController(rootViewController: controller)
         window?.rootViewController = navigationController
+        
+        (controller as? LeagueViewController)?.onDetail = { [weak self] title, Identifier in
+            guard let self = self else { return }
+            let input = SeasonModuleInput(title: title, identifier: Identifier)
+            let controller = self.assembly.build(.season, moduleInput: input)
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
     }
-
+    
 }

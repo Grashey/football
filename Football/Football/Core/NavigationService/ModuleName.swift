@@ -10,4 +10,5 @@ import Foundation
 enum ModuleName {
     
     case league
+    case season
 }
